@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="parent_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="600.0" xmlns:fx-controller="kemri_visitors_project.LoginController" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kemri_visitors_project.LoginController">
+    <children>
+        <Pane fx:id="content_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="540.0" minWidth="600.0" prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <TextField fx:id="usrname" layoutX="301.0" layoutY="209.0" prefHeight="25.0" prefWidth="198.0" promptText="Enter Staff No" />
+                <PasswordField fx:id="pass" layoutX="301.0" layoutY="267.0" prefHeight="25.0" prefWidth="198.0" promptText="Enter Password" />
+                <AnchorPane layoutX="-1.0" prefHeight="39.0" prefWidth="537.0">
+                   <children>
+                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="1.0" prefHeight="49.0" prefWidth="167.0" text="LOGIN" textFill="#408ae4">
+                      </Label>
+                   </children>
+                </AnchorPane>
+
+                <Label layoutX="202.0" layoutY="213.0" prefHeight="17.0" prefWidth="82.0" text="Username" textFill="#b51b72">
+                </Label>
+                <Label layoutX="202.0" layoutY="271.0" prefHeight="17.0" prefWidth="82.0" text="Password" textFill="#b51b72">
+                </Label>
+                <Button layoutX="430.0" layoutY="349.0" mnemonicParsing="false" onAction="#logInAction" prefHeight="30.0" prefWidth="69.0" text="Login" textFill="#22bae5">
+                </Button>
+                <Button layoutX="180.0" layoutY="349.0" mnemonicParsing="false" onAction="#signUpAction" prefHeight="30.0" prefWidth="76.0" text="Sign Up" textFill="#22bae5">
+                </Button>
+                <ImageView fx:id="login_logo_image" fitHeight="135.0" fitWidth="200.0" layoutX="233.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                      <Image url="@assets/kemri_with_motto.jpg" />
+                   </image></ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kemri_visitors_project.HomeController">
+   <children>
+      <TabPane prefHeight="540.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Visitor Registration">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="250.0" layoutY="27.0" text="Register New Visitor">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="173.0" layoutY="87.0" text="Visitor ID Number" />
+                        <Label layoutX="200.0" layoutY="122.0" text="Visitor Name" />
+                        <Label layoutX="151.0" layoutY="161.0" text="Visitor Phone Number" />
+                        <TextField fx:id="visitor_ID_number" layoutX="330.0" layoutY="83.0" promptText="enter visitor ID number" />
+                        <TextField fx:id="visitor_name" layoutX="330.0" layoutY="118.0" promptText="enter visitor name" />
+                        <TextField fx:id="visitor_phone_number" layoutX="330.0" layoutY="157.0" promptText="enter visitor phone number" />
+                        <Button layoutX="427.0" layoutY="241.0" mnemonicParsing="false" onAction="#registerVisitorAction" text="Register" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="VisitorCheck In">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="visitor_id" layoutX="142.0" layoutY="57.0" prefHeight="25.0" prefWidth="196.0" promptText="Visitors ID number" />
+                  <TextField fx:id="visit_reason" layoutX="141.0" layoutY="189.0" prefHeight="25.0" prefWidth="199.0" promptText="Reason for visit" />
+                  <TextField fx:id="visitor_origin" layoutX="141.0" layoutY="97.0" prefHeight="25.0" prefWidth="198.0" promptText="Organization or county or country" />
+                  <ComboBox fx:id="visitor_destination" layoutX="141.0" layoutY="141.0" prefHeight="25.0" prefWidth="198.0" />
+                  <Label layoutX="54.0" layoutY="61.0" prefHeight="17.0" prefWidth="63.0" text="ID no." textFill="#b51b72">
+                     <!-- font>
+                        <Font name="System Bold" size="13.0" />
+                     </font --></Label>
+                  <Label layoutX="54.0" layoutY="101.0" prefHeight="19.0" prefWidth="58.0" text="Origin" textFill="#b51b72">
+                     <!-- font>
+                        <Font name="System Bold" size="13.0" />
+                     </font --></Label>
+                  <Label layoutX="54.0" layoutY="145.0" prefHeight="19.0" prefWidth="85.0" text="Destination" textFill="#b51b72">
+                     <!-- font>
+                        <Font name="System Bold" size="13.0" />
+                     </font --></Label>
+                  <Label layoutX="54.0" layoutY="192.0" prefHeight="19.0" prefWidth="73.0" text="Reason" textFill="#b51b72">
+                     <!-- font>
+                        <Font name="System Bold" size="13.0" />
+                     </font --></Label>
+                  <RadioButton fx:id="visit_on_foot" layoutX="141.0" layoutY="234.0" mnemonicParsing="false" onAction="#onFootAction" text="Foot" />
+                  <RadioButton fx:id="visit_by_vehicle" layoutX="141.0" layoutY="265.0" mnemonicParsing="false" onAction="#byVehicleAction" text="Vehicle" />
+                  <Label layoutX="54.0" layoutY="234.0" prefHeight="19.0" prefWidth="72.0" text="Visit by" textFill="#b51b72">
+                     <!-- font>
+                        <Font name="System Bold" size="13.0" />
+                     </font --></Label>
+                  <TextField fx:id="number_plate_input" layoutX="145.0" layoutY="300.0" prefHeight="25.0" prefWidth="195.0" promptText="Enter the plate number" visible="false" />
+                  <Label fx:id="number_plate_label" layoutX="14.0" layoutY="299.0" prefHeight="27.0" prefWidth="132.0" text="Vehicle's number plate" textFill="#b51b72" visible="false">
+                     <!-- font>
+                        <Font name="System Bold" size="12.0" />
+                     </font -->
+                  </Label>
+                  <Button layoutX="312.0" layoutY="353.0" mnemonicParsing="false" onAction="#checkInAction" text="Check In" textFill="#22bae5">
+                     <!-- font>
+                        <Font size="14.0" />
+                     </font -->
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+            <Tab text="Visitor Check Out">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="270.0" layoutY="71.0" text="Check Out">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="137.0" layoutY="119.0" text="Visitor Number or ID" />
+                        <TextField fx:id="visitor_number_or_ID" layoutX="330.0" layoutY="115.0" prefHeight="25.0" prefWidth="154.0" promptText="enter visitor number or ID" />
+                        <Button layoutX="432.0" layoutY="186.0" mnemonicParsing="false" onAction="#checkOutAction" text="Check Out" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Visit Report">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="55.0" layoutY="14.0" text="Date: " />
+                        <DatePicker fx:id="date_to_report" layoutX="137.0" layoutY="10.0" promptText="date to report" />
+                        <Button layoutX="371.0" layoutY="10.0" mnemonicParsing="false" onAction="#generateVisitReportAction" text="Generate" />
+                        <ListView fx:id="report_list" layoutX="4.0" layoutY="46.0" prefHeight="463.0" prefWidth="615.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

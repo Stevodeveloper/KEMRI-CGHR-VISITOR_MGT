@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kemri_visitors_project.Employee_signupController">
+   <children>
+      <Label layoutX="219.0" layoutY="121.0" text="Staff Number" />
+      <TextField fx:id="staff_number" layoutX="339.0" layoutY="117.0" promptText="enter staff number" />
+      <TextField fx:id="staff_name" layoutX="339.0" layoutY="154.0" promptText="enter staff full name" />
+      <PasswordField fx:id="staff_password" layoutX="339.0" layoutY="233.0" promptText="enter password" />
+      <Label layoutX="236.0" layoutY="158.0" text="Full Name" />
+      <Label layoutX="209.0" layoutY="192.0" text="Phone Number" />
+      <Label layoutX="238.0" layoutY="237.0" text="Password" />
+      <Button layoutX="430.0" layoutY="334.0" mnemonicParsing="false" onAction="#signUpAction" text="Sign Up" />
+      <Button layoutX="238.0" layoutY="334.0" mnemonicParsing="false" onAction="#logInAction" text="Log In" />
+      <Label layoutX="238.0" layoutY="279.0" text="Password" />
+      <PasswordField fx:id="staff_confirm_password" layoutX="339.0" layoutY="275.0" promptText="confirm password" />
+      <Label layoutX="255.0" layoutY="82.0" text="Staff Registration">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="staff_phone_number" layoutX="339.0" layoutY="188.0" promptText="enter staff phone number" />
+   </children>
+</AnchorPane>
