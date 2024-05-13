@@ -1,0 +1,9 @@
+kemri_blue = #22bae5
+
+kemri_pink = #b51b72
+
+kemri_red = #a70b47
+
+white = #ffffff
+
+black = #000000
